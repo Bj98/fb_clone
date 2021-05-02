@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class FbStatus extends StatelessWidget {
+  bool showSingleImage;
+  bool showDoubleImage;
+
+  FbStatus({this.showSingleImage = false, this.showDoubleImage = false});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,9 +26,12 @@ class FbStatus extends StatelessWidget {
           title: RichText(
             text: TextSpan(
               text: 'Bijay Khanal ',
-              style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
               children: <TextSpan>[
-                TextSpan(text: 'is with',style: TextStyle(fontWeight: FontWeight.normal) ),
+                TextSpan(
+                    text: 'is with',
+                    style: TextStyle(fontWeight: FontWeight.normal)),
                 TextSpan(text: ' Baibhav Basnet'),
               ],
             ),
@@ -31,18 +39,50 @@ class FbStatus extends StatelessWidget {
           subtitle: Row(
             children: [
               Text('30m'),
-              Icon(Icons.people,color: Colors.grey.shade900,)
+              Icon(
+                Icons.people,
+                color: Colors.grey.shade900,
+              )
             ],
           ),
           trailing: Icon(Icons.more_vert),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8,left:14),
-          child: Text("This is facebook clone using flutter",style: TextStyle(fontSize:16 ),textAlign: TextAlign.left,),
+          padding: const EdgeInsets.only(top: 8, left: 14),
+          child: Text(
+            "This is facebook clone using flutter",
+            style: TextStyle(fontSize: 16),
+            textAlign: TextAlign.left,
+          ),
         ),
+        showSingleImage
+            ? Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Image.network(
+                    'https://img.jakpost.net/c/2019/09/03/2019_09_03_78912_1567484272._large.jpg'),
+              )
+            : SizedBox.shrink(),
+        showDoubleImage
+            ? Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                        child: Image.network(
+                            'https://www.onlinekhabar.com/wp-content/uploads/2019/10/Fulpati-2076-2-300x183.jpg')),
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Image.network(
+                          'https://www.onlinekhabar.com/wp-content/uploads/2019/10/Fulpati-2076-2-300x183.jpg'),
+                    ))
+                  ],
+                ),
+              )
+            : SizedBox.shrink(),
         Divider(),
         Padding(
-          padding: const EdgeInsets.only(top:8.0,bottom:8.0 ),
+          padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -50,7 +90,7 @@ class FbStatus extends StatelessWidget {
                 children: [
                   Icon(Icons.thumb_up),
                   Padding(
-                    padding: const EdgeInsets.only(left:8.0),
+                    padding: const EdgeInsets.only(left: 8.0),
                     child: Text('Like'),
                   )
                 ],
@@ -59,7 +99,7 @@ class FbStatus extends StatelessWidget {
                 children: [
                   Icon(Icons.comment),
                   Padding(
-                    padding: const EdgeInsets.only(left:8.0),
+                    padding: const EdgeInsets.only(left: 8.0),
                     child: Text('Comment'),
                   )
                 ],
@@ -68,12 +108,11 @@ class FbStatus extends StatelessWidget {
                 children: [
                   Icon(Icons.share),
                   Padding(
-                    padding: const EdgeInsets.only(left:8.0),
+                    padding: const EdgeInsets.only(left: 8.0),
                     child: Text('Share'),
                   )
                 ],
               ),
-
             ],
           ),
         ),

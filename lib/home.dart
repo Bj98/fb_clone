@@ -21,13 +21,15 @@ class Home extends StatelessWidget {
         padding: const EdgeInsets.only(top:12.0,bottom: 12.0),
         child: Container(height: 10,color:Color(0xffc9ccd2)),
       ),
-      FbStatus(),
+      FbStatus(showSingleImage: true),
       Container(height: 10,color:Color(0xffc9ccd2)),
       FbStatus(),
       Container(height: 10,color:Color(0xffc9ccd2)),
-      FbStatus(),
+      FbStatus(showDoubleImage: true,),
       Container(height: 10,color:Color(0xffc9ccd2)),
       FbStatus(),
+      Container(height: 10,color:Color(0xffc9ccd2)),
+      FbStatus(showSingleImage: true,showDoubleImage: true,),
       Container(height: 10,color:Color(0xffc9ccd2)),
 
     ]
