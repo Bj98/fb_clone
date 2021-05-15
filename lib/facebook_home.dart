@@ -16,7 +16,6 @@ class _FacebookHomeState extends State<FacebookHome>
     Tab(icon: Icon(Icons.home)),
     Tab(icon: Icon(Icons.group)),
     Tab(icon: Icon(Icons.ondemand_video)),
-    Tab(icon: Icon(Icons.person_pin)),
     Tab(icon: Icon(Icons.notifications)),
     Tab(icon: Icon(Icons.dehaze)),
   ];
@@ -42,7 +41,7 @@ class _FacebookHomeState extends State<FacebookHome>
         title: Text(
           'facebook',
           style:
-              TextStyle(color: Color(0xff1a76ef), fontWeight: FontWeight.bold),
+              TextStyle(color: Color(0xff1a76ef), fontWeight: FontWeight.bold,fontSize: 24),
         ),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.search)),
@@ -80,11 +79,6 @@ class _FacebookHomeState extends State<FacebookHome>
             _selectedIndex.toString(),
             style: TextStyle(fontSize: 40),
           )),
-          Center(
-              child: Text(
-            _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
-          ))
         ],
       ),
     );

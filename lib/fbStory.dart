@@ -7,7 +7,7 @@ class FbStory extends StatelessWidget {
     List<Widget> story = new List();
     for (int i = 0; i <= 20; i++) {
       story.add(Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(3.0),
         child: Stack(
           children: [
             ClipRRect(
@@ -46,14 +46,15 @@ class FbStory extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
+        padding: const EdgeInsets.only(top: 8, left: 8),
         child: Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 12.0),
-              child: Container(
-                height: 200,
-                width: 100,
+             Padding(
+               padding: const EdgeInsets.only(right: 3.0),
+               child:
+              Container(
+                height: 165,
+                width: 90,
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(20),

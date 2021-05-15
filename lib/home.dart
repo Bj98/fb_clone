@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(children:<Widget>[
       Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 2,horizontal: 2),
         child: WhatsInMind(),
       ),
       Container(height: 10,color:Color(0xffc9ccd2)),

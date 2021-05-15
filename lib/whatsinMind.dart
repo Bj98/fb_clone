@@ -9,7 +9,7 @@ class WhatsInMind extends StatelessWidget {
         Expanded(
             flex: 1,
             child: CircleAvatar(
-                radius: 40.0,
+                radius: 20.0,
                 backgroundImage: NetworkImage(
                     'https://scontent.fktm3-1.fna.fbcdn.net/v/t1.6435-1/cp0/p80x80/131094351_2822116351401625_8106084777890553861_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=7206a8&_nc_ohc=8PyCNMxkO1kAX9_P2tx&_nc_ht=scontent.fktm3-1.fna&tp=27&oh=798cc46486801f97e77b087f5bbbf27c&oe=60B25F10'))),
         Expanded(
@@ -18,8 +18,8 @@ class WhatsInMind extends StatelessWidget {
                 padding: EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    hintText: ("What's in your mind?"),
-                    contentPadding: EdgeInsets.all(15.0),
+                    hintText: ("What's on your mind?"),
+                    contentPadding: EdgeInsets.all(10.0),
                     border: new OutlineInputBorder(
                         borderRadius: const BorderRadius.all(
                       const Radius.circular(30.0),
